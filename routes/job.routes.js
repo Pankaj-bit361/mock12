@@ -7,7 +7,7 @@ const JobRoute=express.Router()
 
 
 JobRoute.post("/", async (req,res)=>{
-
+console.log(req.body)
 try {
     let newuser=new JobModel(req.body)
     await newuser.save()
